@@ -27,15 +27,19 @@ public class Coupon extends Activity {
 				setContentView(R.layout.coupon);
 				break;
 			case 1:
-				setContentView(R.layout.coupon);
+				setContentView(R.layout.coupon1);
 				break;
 			default:
 				setContentView(R.layout.coupon);
 				break;
 			}
+
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 			TextView coupon = (TextView) findViewById(R.id.coupon);
+			TextView shop = (TextView) findViewById(R.id.shop);
 			coupon.setText(couponData.Coupon);
+			shop.setText(couponData.ShopName + "\n" + couponData.ShopTel + "\n"
+					+ couponData.ShopAddress);
 
 			Log.d("NFC", "“X" + couponData.ShopName + " " + couponData.ShopTel
 					+ " " + couponData.ShopAddress);
